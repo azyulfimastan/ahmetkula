@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "title": "Ahmet Kula — Software Engineer & Creative Developer",
+    "description": "The living digital identity of Ahmet Kula: interactive experiences, software and creative development.",
+    "projectsTitle": "Projects — Ahmet Kula",
+    "projectsDescription": "Selected work and case studies by Ahmet Kula.",
+    "ogAlt": "Ahmet Kula — Digital Playground",
+    "jobTitle": "Software Engineer"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Choose language",
+    "theme": "Toggle theme",
+    "terminal": "Open terminal",
+    "palette": "Open command palette",
+    "scrollProgress": "Page progress",
+    "backToTop": "Back to top",
+    "home": "Home",
+    "mainNav": "Main navigation",
+    "toastRegion": "Notifications"
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "playground": "Playground",
+    "contact": "Contact",
+    "terminal": "Terminal",
+    "palette": "Commands"
+  },
+  "status": {
+    "online": "SYSTEM ONLINE",
+    "localTime": "LOCAL TIME"
+  },
+  "preloader": {
+    "lines": ["INITIALIZING...", "CRAFTING THE EXPERIENCE...", "WELCOME TO MY WORLD."],
+    "skip": "Skip",
+    "steps": "Preparing"
+  },
+  "hero": {
+    "role1": "SOFTWARE ENGINEER",
+    "role2": "CREATIVE DEVELOPER",
+    "tagline": "Turning ideas into code, and code into experiences.",
+    "vibe": "I BUILD THINGS THAT FEEL ALIVE.",
+    "explore": "EXPLORE WORK",
+    "contact": "GET IN TOUCH",
+    "dragHint": "Drag the object, click it, scatter it.",
+    "dragHintTouch": "Touch the object and swipe.",
+    "scroll": "SCROLL",
+    "sculptureLabel": "Interactive parametric 3D sculpture. Drag to rotate, click to change its form.",
+    "fallback": "The 3D scene is disabled on this device."
+  },
+  "cursor": {
+    "view": "VIEW",
+    "drag": "DRAG",
+    "interact": "INTERACT"
+  },
+  "about": {
+    "eyebrow": "ABOUT",
+    "title1": "I DON'T JUST WRITE CODE.",
+    "title2": "I BUILD DIGITAL EXPERIENCES.",
+    "intro": "Hi, I'm Ahmet Kula. I like building digital products and interactive experiences where technology, design and creativity meet. To me, good software isn't just code that works; it's an experience that is considered, fast and valuable to the people using it.",
+    "tags": ["SOFTWARE ENGINEER", "CREATIVE DEVELOPER", "TR / EN"],
+    "mantra": "Beyond the code.",
+    "pointsLabel": "How I work",
+    "points": [
+      { "label": "Think.", "text": "I start by understanding the problem and the people living with it." },
+      { "label": "Design.", "text": "Structure, rhythm and motion are considered together from the start." },
+      { "label": "Build.", "text": "I deliver fast, accessible and easy to maintain." }
+    ],
+    "portraitAlt": "Portrait of Ahmet Kula",
+    "fallbackLabel": "PORTRAIT COMING SOON"
+  },
+  "work": {
+    "eyebrow": "SELECTED WORK",
+    "title": "WORK",
+    "all": "ALL PROJECTS",
+    "sample": "SAMPLE",
+    "sampleLong": "This is a sample entry, not real work.",
+    "view": "OPEN CASE STUDY",
+    "github": "GitHub",
+    "demo": "Live demo",
+    "soon": "No link added",
+    "dragHint": "Swipe sideways"
+  },
+  "projects": {
+    "title": "WORK",
+    "intro": "Selected work and case studies.",
+    "back": "Home"
+  },
+  "project": {
+    "back": "All projects",
+    "overview": "Overview",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "outcome": "Outcome",
+    "stack": "Stack",
+    "links": "Links",
+    "next": "NEXT PROJECT",
+    "sampleNotice": "SAMPLE ENTRY — This page is a template and not real work. Replace the content in src/data/projects.ts.",
+    "noLinks": "No links have been added for this project yet.",
+    "visualLabel": "Generative cover artwork for the project"
+  },
+  "toolbox": {
+    "eyebrow": "TOOLBOX",
+    "title": "THE TOOLBOX",
+    "subtitle": "Tools that turn ideas into reality.",
+    "hint": "Drag the tags, get close, click.",
+    "selected": "Selected",
+    "none": "Click a tag.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "creative": "Creative Development",
+      "tools": "Tools"
+    }
+  },
+  "playground": {
+    "eyebrow": "LAB",
+    "title": "PLAYGROUND.",
+    "subtitle": "Here, code is a little more free.",
+    "loading": "Loading experiment...",
+    "touchNote": "On touch devices the experiments capture page scrolling; tap outside an experiment to scroll.",
+    "particle": { "title": "Particle Typography", "hint": "Move close, click, or scatter with your finger.", "label": "AHMET KULA text made of particles. It scatters on pointer contact." },
+    "art": {
+      "title": "Generative Art Canvas",
+      "hint": "Draw. Speed shapes the character of the line.",
+      "clear": "CLEAR",
+      "save": "SAVE ART",
+      "auto": "Auto",
+      "color": "Color",
+      "label": "Drawing area. Draw with your mouse or finger."
+    },
+    "physics": { "title": "Physics Sandbox", "hint": "Grab, fling and collide the objects.", "reset": "RESET", "label": "Physics area. Drag and drop the objects." }
+  },
+  "contact": {
+    "eyebrow": "CONTACT",
+    "title": "LET'S BUILD SOMETHING REMARKABLE.",
+    "copyEmail": "COPY EMAIL",
+    "copied": "COPIED",
+    "copyFailed": "COPY FAILED",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "soon": "Soon",
+    "channels": "Channels"
+  },
+  "footer": {
+    "rights": "© Ahmet Kula —",
+    "top": "BACK TO TOP",
+    "tagline": "Think. Design. Build.",
+    "built": "Built with intention."
+  },
+  "theme": {
+    "forest": "Deep Forest",
+    "ivory": "Ivory Mode",
+    "changed": "Theme: {name}"
+  },
+  "terminal": {
+    "title": "ahmet@kula:~$",
+    "close": "Close terminal",
+    "welcome": "Welcome. Type `help` to see the commands.",
+    "inputLabel": "Terminal command",
+    "notFound": "command not found: {cmd}. Type `help`.",
+    "help": [
+      ["help", "Show commands"],
+      ["about", "About Ahmet Kula"],
+      ["projects", "List projects"],
+      ["skills", "Show technologies"],
+      ["contact", "Contact details"],
+      ["github", "Open the GitHub profile"],
+      ["whoami", "Who are you?"],
+      ["date", "Current date"],
+      ["theme", "Switch theme"],
+      ["play", "Go to the Playground"],
+      ["clear", "Clear the terminal"],
+      ["exit", "Close the terminal"]
+    ],
+    "about": "Ahmet Kula — Software Engineer / Creative Developer. Builds digital experiences where technology, design and creativity meet.",
+    "projectsHeader": "Projects (sample entries are marked):",
+    "skillsHeader": "Toolbox:",
+    "contactHeader": "Contact:",
+    "contactNone": "(not added yet)",
+    "githubOpen": "Opening the GitHub profile in a new tab...",
+    "githubNone": "No GitHub link defined yet. You can add one in src/config/site.ts.",
+    "whoami": [
+      "A curious one. Probably about to open another tab.",
+      "The most attentive visitor of this site.",
+      "uid=1000(guest) gid=1000(curious) groups=1000(curious),27(coffee)"
+    ],
+    "theme": "Theme changed: {name}",
+    "play": "Heading to the Playground...",
+    "exit": "Closing session...",
+    "devOn": "Developer mode on. It switches off in 8 seconds.",
+    "devOff": "Developer mode off.",
+    "lang": "Switching language: {name}",
+    "unknownLang": "Usage: lang tr | lang en",
+    "sudo": "Nice try. This terminal doesn't run real system commands.",
+    "dateLabel": "Date"
+  },
+  "palette": {
+    "label": "Command palette",
+    "placeholder": "Search a command...",
+    "empty": "No results.",
+    "hint": "↑↓ navigate · Enter select · Esc close",
+    "items": {
+      "work": "Go to work",
+      "projectsPage": "All projects page",
+      "about": "Open About",
+      "playground": "Go to the Playground",
+      "contact": "Go to Contact",
+      "terminal": "Open the terminal",
+      "language": "Switch language: Türkçe",
+      "theme": "Toggle theme",
+      "top": "Back to top",
+      "github": "Open the GitHub profile"
+    }
+  },
+  "easter": {
+    "konami": "KONAMI. +30 LIVES.",
+    "alt": "Alternate palette unlocked.",
+    "back": "Back to the default palette.",
+    "hidden": [
+      "Yes, the full stop is part of the design.",
+      "Respect for scrolling this far.",
+      "Did you try the ~ key?",
+      "If you know the Konami code, you already know."
+    ]
+  },
+  "notFound": {
+    "title": "404",
+    "text": "The page you're looking for doesn't exist in this universe.",
+    "home": "BACK TO HOME"
+  },
+  "loading": "LOADING"
+}

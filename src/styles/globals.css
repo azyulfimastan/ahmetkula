@@ -1,0 +1,284 @@
+@import "@fontsource-variable/space-grotesk/index.css";
+@import "@fontsource-variable/inter/index.css";
+@import "@fontsource-variable/jetbrains-mono/index.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+
+  /* Varsayılan: Deep Forest / dark ton. Scroll ile ToneSync tarafından güncellenir. */
+  --bg: 16 31 28;
+  --fg: 237 233 223;
+  --muted: 142 148 140;
+  --accent: 255 101 66;
+  --signal: 214 244 106;
+}
+
+html {
+  background: rgb(var(--bg));
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+html[data-theme="ivory"] {
+  color-scheme: light;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgb(var(--accent));
+  color: rgb(var(--bg));
+}
+
+/* Görünür odak */
+:focus-visible {
+  outline: 2px solid rgb(var(--signal));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -4rem;
+  z-index: 200;
+  padding: 0.6rem 1rem;
+  background: rgb(var(--signal));
+  color: rgb(16 31 28);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- Tipografi yardımcıları ---------- */
+.font-display {
+  font-family: var(--font-display);
+}
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.glyph {
+  display: inline-block;
+  font-variation-settings: "wght" var(--w, 600);
+  will-change: transform;
+}
+.mask-line {
+  display: block;
+  overflow: hidden;
+}
+.mask-line > .mask-inner {
+  display: block;
+  will-change: transform;
+}
+
+/* ---------- Sinematik doku ---------- */
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: grain 1.2s steps(6) infinite;
+  mix-blend-mode: soft-light;
+}
+html[data-theme="ivory"] .grain {
+  opacity: 0.1;
+  filter: invert(1);
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ---------- Özel cursor ---------- */
+html.has-custom-cursor,
+html.has-custom-cursor a,
+html.has-custom-cursor button,
+html.has-custom-cursor [data-cursor] {
+  cursor: none;
+}
+html.has-custom-cursor input,
+html.has-custom-cursor textarea {
+  cursor: text;
+}
+
+/* ---------- Bölüm imzası: AK kayma çizgisi ---------- */
+.sig-slash {
+  position: relative;
+}
+.sig-slash::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 0.5px),
+    rgb(var(--accent) / 0.6) calc(50% - 0.5px),
+    rgb(var(--accent) / 0.6) calc(50% + 0.5px),
+    transparent calc(50% + 0.5px)
+  );
+  pointer-events: none;
+}
+
+.hairline {
+  height: 1px;
+  background: rgb(var(--fg) / 0.18);
+}
+
+/* ---------- Yatay galeri (mobil: native scroll-snap) ---------- */
+.snap-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-inline: 1.25rem;
+}
+.snap-track::-webkit-scrollbar {
+  display: none;
+}
+.snap-track > * {
+  scroll-snap-align: center;
+  flex: 0 0 82%;
+}
+
+/* ---------- Proje görsel maskesi ---------- */
+.mask-shift {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: clip-path 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.group:hover .mask-shift,
+.group:focus-visible .mask-shift,
+.group[data-touch-active="true"] .mask-shift {
+  clip-path: polygon(9% 0, 100% 0, 91% 100%, 0 100%);
+}
+
+/* ---------- Developer mode ---------- */
+html[data-dev="true"] * {
+  outline: 1px solid rgb(var(--signal) / 0.28);
+  outline-offset: -1px;
+}
+.dev-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding-inline: 1.25rem;
+}
+.dev-grid > div {
+  background: rgb(var(--signal) / 0.07);
+  border-inline: 1px dashed rgb(var(--signal) / 0.4);
+}
+
+/* ---------- Azaltılmış hareket ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .grain {
+    display: none;
+  }
+}
+
+/* Intro atlandıysa preloader hiç görünmesin */
+html[data-intro="skip"] .preloader {
+  display: none !important;
+}
+
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* ---------- Harf maskesi (aksanlı büyük harfler kırpılmasın) ---------- */
+.kmask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0.16em 0.03em;
+  margin: -0.16em -0.03em;
+}
+.kchar {
+  display: inline-block;
+}
+
+html.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Ivory Mode: JS çalışmadan önceki ilk boyama */
+html[data-theme="ivory"] {
+  --bg: 237 233 223;
+  --fg: 23 32 29;
+  --muted: 78 86 80;
+  --accent: 200 48 18;
+  --signal: 88 110 8;
+}

@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "title": "Ahmet Kula — Yazılım Mühendisi & Creative Developer",
+    "description": "Ahmet Kula'nın yaşayan dijital kimliği: interaktif deneyimler, yazılım ve yaratıcı geliştirme.",
+    "projectsTitle": "Projeler — Ahmet Kula",
+    "projectsDescription": "Ahmet Kula'nın seçilmiş işleri ve vaka çalışmaları.",
+    "ogAlt": "Ahmet Kula — Digital Playground",
+    "jobTitle": "Yazılım Mühendisi"
+  },
+  "a11y": {
+    "skip": "İçeriğe geç",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "language": "Dil seç",
+    "theme": "Temayı değiştir",
+    "terminal": "Terminali aç",
+    "palette": "Komut paletini aç",
+    "scrollProgress": "Sayfa ilerlemesi",
+    "backToTop": "Başa dön",
+    "home": "Ana sayfa",
+    "mainNav": "Ana menü",
+    "toastRegion": "Bildirimler"
+  },
+  "nav": {
+    "work": "Projeler",
+    "about": "Hakkımda",
+    "playground": "Playground",
+    "contact": "İletişim",
+    "terminal": "Terminal",
+    "palette": "Komutlar"
+  },
+  "status": {
+    "online": "SİSTEM ÇEVRİMİÇİ",
+    "localTime": "YEREL SAAT"
+  },
+  "preloader": {
+    "lines": ["BAŞLATILIYOR...", "DENEYİM ŞEKİLLENİYOR...", "DÜNYAMA HOŞ GELDİN."],
+    "skip": "Atla",
+    "steps": "Hazırlık"
+  },
+  "hero": {
+    "role1": "SOFTWARE ENGINEER",
+    "role2": "CREATIVE DEVELOPER",
+    "tagline": "Fikirleri koda, kodu deneyime dönüştürüyorum.",
+    "vibe": "CANLI HİSSETTİREN ŞEYLER YAPIYORUM.",
+    "explore": "PROJELERİ KEŞFET",
+    "contact": "İLETİŞİME GEÇ",
+    "dragHint": "Objeyi sürükle, tıkla, dağıt.",
+    "dragHintTouch": "Objeye dokun ve kaydır.",
+    "scroll": "AŞAĞI KAYDIR",
+    "sculptureLabel": "Etkileşimli 3D parametrik heykel. Sürükleyerek döndürebilir, tıklayarak biçimini değiştirebilirsin.",
+    "fallback": "3D sahne bu cihazda devre dışı."
+  },
+  "cursor": {
+    "view": "İNCELE",
+    "drag": "SÜRÜKLE",
+    "interact": "ETKİLEŞİM"
+  },
+  "about": {
+    "eyebrow": "HAKKIMDA",
+    "title1": "BEN SADECE KOD YAZMIYORUM.",
+    "title2": "DİJİTAL DENEYİMLER İNŞA EDİYORUM.",
+    "intro": "Merhaba, ben Ahmet Kula. Teknoloji, tasarım ve yaratıcılığın kesişiminde dijital ürünler ve etkileşimli deneyimler geliştirmeyi seviyorum. Benim için iyi yazılım yalnızca çalışan kod değil; aynı zamanda düşünülmüş, hızlı ve kullanıcıya değer katan bir deneyimdir.",
+    "tags": ["SOFTWARE ENGINEER", "CREATIVE DEVELOPER", "TR / EN"],
+    "mantra": "Kodun ötesinde.",
+    "pointsLabel": "Çalışma biçimim",
+    "points": [
+      { "label": "Düşün.", "text": "Önce problemi ve onu yaşayan insanı anlarım." },
+      { "label": "Tasarla.", "text": "Yapı, ritim ve hareket baştan birlikte düşünülür." },
+      { "label": "Geliştir.", "text": "Hızlı, erişilebilir ve bakımı kolay olarak teslim ederim." }
+    ],
+    "portraitAlt": "Ahmet Kula portresi",
+    "fallbackLabel": "PORTRE YAKINDA"
+  },
+  "work": {
+    "eyebrow": "SEÇİLMİŞ İŞLER",
+    "title": "PROJELER",
+    "all": "TÜM PROJELER",
+    "sample": "ÖRNEK",
+    "sampleLong": "Bu bir örnek kayıttır; gerçek bir iş değildir.",
+    "view": "VAKA ÇALIŞMASINI AÇ",
+    "github": "GitHub",
+    "demo": "Canlı demo",
+    "soon": "Bağlantı eklenmedi",
+    "dragHint": "Yana kaydır"
+  },
+  "projects": {
+    "title": "PROJELER",
+    "intro": "Seçilmiş işler ve vaka çalışmaları.",
+    "back": "Ana sayfa"
+  },
+  "project": {
+    "back": "Tüm projeler",
+    "overview": "Genel bakış",
+    "challenge": "Problem",
+    "approach": "Yaklaşım",
+    "outcome": "Sonuç",
+    "stack": "Teknolojiler",
+    "links": "Bağlantılar",
+    "next": "SIRADAKİ PROJE",
+    "sampleNotice": "ÖRNEK KAYIT — Bu sayfa şablon amaçlıdır ve gerçek bir iş değildir. Gerçek içeriği src/data/projects.ts dosyasından güncelle.",
+    "noLinks": "Bu proje için henüz bağlantı eklenmedi.",
+    "visualLabel": "Proje için üretken kapak görseli"
+  },
+  "toolbox": {
+    "eyebrow": "ARAÇ KUTUSU",
+    "title": "THE TOOLBOX",
+    "subtitle": "Fikirleri gerçeğe dönüştüren araçlar.",
+    "hint": "Etiketleri sürükle, yaklaş, tıkla.",
+    "selected": "Seçili",
+    "none": "Bir etikete tıkla.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud & DevOps",
+      "creative": "Creative Development",
+      "tools": "Tools"
+    }
+  },
+  "playground": {
+    "eyebrow": "DENEY ALANI",
+    "title": "PLAYGROUND.",
+    "subtitle": "Burada kod biraz daha özgür.",
+    "loading": "Deney yükleniyor...",
+    "touchNote": "Dokunmatik cihazlarda deney alanları sayfa kaydırmayı yakalar; kaydırmak için alanın dışına dokun.",
+    "particle": { "title": "Particle Typography", "hint": "İmleci yaklaştır, tıkla, parmağınla dağıt.", "label": "Parçacıklardan oluşan AHMET KULA yazısı. İmleçle dağıtılabilir." },
+    "art": {
+      "title": "Generative Art Canvas",
+      "hint": "Çiz. Hız, çizginin karakterini belirler.",
+      "clear": "TEMİZLE",
+      "save": "SAVE ART",
+      "auto": "Otomatik",
+      "color": "Renk",
+      "label": "Çizim alanı. Fareyle veya parmakla çizebilirsin."
+    },
+    "physics": { "title": "Physics Sandbox", "hint": "Nesneleri tut, savur, çarptır.", "reset": "RESET", "label": "Fizik alanı. Nesneleri sürükleyip bırakabilirsin." }
+  },
+  "contact": {
+    "eyebrow": "İLETİŞİM",
+    "title": "BİRLİKTE BİR ŞEYLER İNŞA EDELİM.",
+    "copyEmail": "E-POSTAYI KOPYALA",
+    "copied": "KOPYALANDI",
+    "copyFailed": "KOPYALANAMADI",
+    "email": "E-posta",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "soon": "Yakında",
+    "channels": "Kanallar"
+  },
+  "footer": {
+    "rights": "© Ahmet Kula —",
+    "top": "BAŞA DÖN",
+    "tagline": "Düşün. Tasarla. Geliştir.",
+    "built": "Daha iyi dijital deneyimler için."
+  },
+  "theme": {
+    "forest": "Deep Forest",
+    "ivory": "Ivory Mode",
+    "changed": "Tema: {name}"
+  },
+  "terminal": {
+    "title": "ahmet@kula:~$",
+    "close": "Terminali kapat",
+    "welcome": "Hoş geldin. Komutları görmek için `help` yaz.",
+    "inputLabel": "Terminal komutu",
+    "notFound": "komut bulunamadı: {cmd}. `help` yaz.",
+    "help": [
+      ["help", "Komutları göster"],
+      ["about", "Ahmet Kula hakkında"],
+      ["projects", "Projeleri listele"],
+      ["skills", "Teknolojileri göster"],
+      ["contact", "İletişim bilgileri"],
+      ["github", "GitHub profilini aç"],
+      ["whoami", "Sen kimsin?"],
+      ["date", "Geçerli tarih"],
+      ["theme", "Temayı değiştir"],
+      ["play", "Playground'a git"],
+      ["clear", "Terminali temizle"],
+      ["exit", "Terminali kapat"]
+    ],
+    "about": "Ahmet Kula — Software Engineer / Creative Developer. Teknoloji, tasarım ve yaratıcılığın kesişiminde dijital deneyimler kurar.",
+    "projectsHeader": "Projeler (örnek kayıtlar işaretlidir):",
+    "skillsHeader": "Araç kutusu:",
+    "contactHeader": "İletişim:",
+    "contactNone": "(henüz eklenmedi)",
+    "githubOpen": "GitHub profili yeni sekmede açılıyor...",
+    "githubNone": "GitHub bağlantısı henüz tanımlanmadı. src/config/site.ts dosyasından ekleyebilirsin.",
+    "whoami": [
+      "Merak eden biri. Muhtemelen bir sekme daha açmak üzere.",
+      "Bu sitenin en dikkatli ziyaretçisi.",
+      "uid=1000(misafir) gid=1000(merak) groups=1000(merak),27(kahve)"
+    ],
+    "theme": "Tema değişti: {name}",
+    "play": "Playground'a gidiliyor...",
+    "exit": "Oturum kapatılıyor...",
+    "devOn": "Developer mode açıldı. 8 saniye sonra kapanır.",
+    "devOff": "Developer mode kapandı.",
+    "lang": "Dil değiştiriliyor: {name}",
+    "unknownLang": "Kullanım: lang tr | lang en",
+    "sudo": "Güzel deneme. Bu terminal gerçek sistem komutları çalıştırmaz.",
+    "dateLabel": "Tarih"
+  },
+  "palette": {
+    "label": "Komut paleti",
+    "placeholder": "Bir komut ara...",
+    "empty": "Sonuç yok.",
+    "hint": "↑↓ gez · Enter seç · Esc kapat",
+    "items": {
+      "work": "Projelere git",
+      "projectsPage": "Tüm projeler sayfası",
+      "about": "Hakkımda'yı aç",
+      "playground": "Playground'a git",
+      "contact": "İletişime git",
+      "terminal": "Terminali aç",
+      "language": "Dili değiştir: English",
+      "theme": "Temayı değiştir",
+      "top": "Başa dön",
+      "github": "GitHub profilini aç"
+    }
+  },
+  "easter": {
+    "konami": "KONAMI. +30 CAN.",
+    "alt": "Alternatif palet açıldı.",
+    "back": "Varsayılan palete dönüldü.",
+    "hidden": [
+      "Evet, nokta da tasarımın parçası.",
+      "Buraya kadar inene saygı.",
+      "~ tuşuna bastın mı?",
+      "Konami kodunu biliyorsan zaten biliyorsun."
+    ]
+  },
+  "notFound": {
+    "title": "404",
+    "text": "Aradığın sayfa bu evrende yok.",
+    "home": "ANA SAYFAYA DÖN"
+  },
+  "loading": "YÜKLENİYOR"
+}
