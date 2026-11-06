@@ -189,7 +189,7 @@ export function Toolbox() {
                           }
                           setSelected(selected === x.id ? null : x.id);
                         }}
-                        className={`touch-none select-none border px-4 py-2.5 font-display text-[clamp(1rem,1.6vw,1.35rem)] transition-colors ${
+                        className={`touch-pan-y select-none border px-4 py-2.5 font-display text-[clamp(1rem,1.6vw,1.35rem)] transition-colors ${
                           selected === x.id ? "border-accent bg-accent text-bg" : "border-fg/40 hover:border-fg"
                         }`}
                         style={{ borderRadius: "999px" }}

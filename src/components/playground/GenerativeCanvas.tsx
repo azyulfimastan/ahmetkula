@@ -11,6 +11,32 @@ const PALETTE = [
   { id: "sand", value: "#D8CDBA" },
 ];
 
+/** Başlangıç çizimi: tuval boş görünmesin diye birkaç akışlı çizgi. Deterministik, rastgelelik yok. */
+function paintSeed(ctx: CanvasRenderingContext2D, W: number, H: number, dpr: number) {
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.lineCap = "round";
+  const cols = [PALETTE[0].value, PALETTE[1].value, PALETTE[2].value, PALETTE[3].value];
+  for (let i = 0; i < 9; i++) {
+    const c = cols[i % cols.length];
+    const y0 = H * (0.18 + i * 0.085);
+    const amp = H * (0.05 + (i % 3) * 0.025);
+    const ph = i * 0.9;
+    ctx.beginPath();
+    for (let x = 0; x <= W; x += 6) {
+      const u = x / W;
+      const y = y0 + Math.sin(u * Math.PI * 2.4 + ph) * amp + Math.sin(u * Math.PI * 5.2 + ph * 1.7) * amp * 0.35;
+      if (x === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = c;
+    ctx.globalAlpha = i % 3 === 0 ? 0.55 : 0.28;
+    ctx.lineWidth = (i % 3 === 0 ? 3 : 1.4) * dpr;
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
 export default function GenerativeCanvas() {
   const t = useTranslations("playground.art");
   const wrap = useRef<HTMLDivElement>(null);
@@ -29,6 +55,7 @@ export default function GenerativeCanvas() {
     ctx.fillStyle = BG;
     ctx.fillRect(0, 0, cv.width, cv.height);
     ctx.restore();
+    paintSeed(ctx, cv.width, cv.height, Math.min(window.devicePixelRatio || 1, 2));
     setDrawn(false);
   }, []);
 
@@ -55,6 +82,7 @@ export default function GenerativeCanvas() {
     const ctx = cv.getContext("2d");
     if (!ctx) return;
     let dpr = 1;
+    let inited = false;
 
     const resize = () => {
       const r = el.getBoundingClientRect();
@@ -72,7 +100,12 @@ export default function GenerativeCanvas() {
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.fillStyle = BG;
       ctx.fillRect(0, 0, cv.width, cv.height);
-      if (keep.width > 1) ctx.drawImage(keep, 0, 0);
+      if (inited) {
+        if (keep.width > 1) ctx.drawImage(keep, 0, 0);
+      } else {
+        inited = true;
+        paintSeed(ctx, cv.width, cv.height, dpr);
+      }
     };
     resize();
     const ro = new ResizeObserver(resize);
@@ -163,7 +196,7 @@ export default function GenerativeCanvas() {
       <div ref={wrap} className="relative min-h-0 flex-1">
         <canvas ref={canvas} role="img" aria-label={t("label")} data-cursor="interact" className="absolute inset-0 block touch-none" />
         {!drawn && (
-          <p className="mono-label pointer-events-none absolute inset-0 grid place-items-center text-[0.68rem] text-[#8E948C]">{t("hint")}</p>
+          <p className="mono-label pointer-events-none absolute inset-x-0 bottom-4 text-center text-[0.68rem] text-[#EDE9DF]">{t("hint")}</p>
         )}
       </div>
       <div className="mono-label flex flex-wrap items-center gap-2 border-t border-[#EDE9DF]/15 px-3 py-2.5 text-[0.62rem] text-[#EDE9DF]">
@@ -172,7 +205,7 @@ export default function GenerativeCanvas() {
           type="button"
           aria-pressed={color === "auto"}
           onClick={() => setColor("auto")}
-          className={`border px-2 py-1 ${color === "auto" ? "border-[#D6F46A] text-[#D6F46A]" : "border-[#EDE9DF]/30"}`}
+          className={`border px-3 py-2.5 md:px-2 md:py-1 ${color === "auto" ? "border-[#D6F46A] text-[#D6F46A]" : "border-[#EDE9DF]/30"}`}
         >
           {t("auto")}
         </button>
@@ -183,15 +216,15 @@ export default function GenerativeCanvas() {
             aria-label={p.id}
             aria-pressed={color === p.value}
             onClick={() => setColor(p.value)}
-            className="h-6 w-6 border"
+            className="h-9 w-9 border md:h-6 md:w-6"
             style={{ background: p.value, borderColor: color === p.value ? "#fff" : "transparent", outline: color === p.value ? "1px solid #fff" : "none", outlineOffset: 2 }}
           />
         ))}
         <span className="flex-1" />
-        <button type="button" onClick={clear} className="border border-[#EDE9DF]/30 px-3 py-1.5 hover:border-[#FF6542] hover:text-[#FF6542]">
+        <button type="button" onClick={clear} className="border border-[#EDE9DF]/30 px-3 py-2.5 hover:border-[#FF6542] hover:text-[#FF6542] md:py-1.5">
           {t("clear")}
         </button>
-        <button type="button" onClick={save} className="bg-[#D6F46A] px-3 py-1.5 text-[#101F1C] hover:bg-[#FF6542]">
+        <button type="button" onClick={save} className="bg-[#D6F46A] px-3 py-2.5 text-[#101F1C] hover:bg-[#FF6542] md:py-1.5">
           {t("save")}
         </button>
       </div>

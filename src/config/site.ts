@@ -11,6 +11,8 @@ export const siteConfig = {
   domain: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   /** Canlı saat için IANA saat dilimi. Örn: "Europe/Istanbul", "Europe/Warsaw" */
   timeZone: "Europe/Istanbul",
+  /** Header'daki saat etiketinde görünen şehir adı. */
+  timeZoneLabel: "İstanbul",
   contact: {
     /** Örn: "merhaba@ornek.com" */
     email: "",

@@ -213,7 +213,7 @@ export default function PhysicsSandbox() {
         <p className="mono-label pointer-events-none absolute bottom-3 left-3 text-[0.6rem] text-[#8E948C]">{t("hint")}</p>
       </div>
       <div className="mono-label flex justify-end border-t border-[#EDE9DF]/15 px-3 py-2.5 text-[0.62rem]">
-        <button type="button" onClick={reset} className="border border-[#EDE9DF]/30 px-3 py-1.5 text-[#EDE9DF] hover:border-[#FF6542] hover:text-[#FF6542]">
+        <button type="button" onClick={reset} className="border border-[#EDE9DF]/30 px-3 py-2.5 text-[#EDE9DF] md:py-1.5 hover:border-[#FF6542] hover:text-[#FF6542]">
           {t("reset")}
         </button>
       </div>

@@ -31,10 +31,14 @@
   },
   "status": {
     "online": "SYSTEM ONLINE",
-    "localTime": "LOCAL TIME"
+    "localTime": "{city} TIME"
   },
   "preloader": {
-    "lines": ["INITIALIZING...", "CRAFTING THE EXPERIENCE...", "WELCOME TO MY WORLD."],
+    "lines": [
+      "INITIALIZING...",
+      "CRAFTING THE EXPERIENCE...",
+      "WELCOME TO MY WORLD."
+    ],
     "skip": "Skip",
     "steps": "Preparing"
   },
@@ -61,13 +65,26 @@
     "title1": "I DON'T JUST WRITE CODE.",
     "title2": "I BUILD DIGITAL EXPERIENCES.",
     "intro": "Hi, I'm Ahmet Kula. I like building digital products and interactive experiences where technology, design and creativity meet. To me, good software isn't just code that works; it's an experience that is considered, fast and valuable to the people using it.",
-    "tags": ["SOFTWARE ENGINEER", "CREATIVE DEVELOPER", "TR / EN"],
+    "tags": [
+      "SOFTWARE ENGINEER",
+      "CREATIVE DEVELOPER",
+      "TR / EN"
+    ],
     "mantra": "Beyond the code.",
     "pointsLabel": "How I work",
     "points": [
-      { "label": "Think.", "text": "I start by understanding the problem and the people living with it." },
-      { "label": "Design.", "text": "Structure, rhythm and motion are considered together from the start." },
-      { "label": "Build.", "text": "I deliver fast, accessible and easy to maintain." }
+      {
+        "label": "Think.",
+        "text": "I start by understanding the problem and the people living with it."
+      },
+      {
+        "label": "Design.",
+        "text": "Structure, rhythm and motion are considered together from the start."
+      },
+      {
+        "label": "Build.",
+        "text": "I deliver fast, accessible and easy to maintain."
+      }
     ],
     "portraitAlt": "Portrait of Ahmet Kula",
     "fallbackLabel": "PORTRAIT COMING SOON"
@@ -122,8 +139,12 @@
     "title": "PLAYGROUND.",
     "subtitle": "Here, code is a little more free.",
     "loading": "Loading experiment...",
-    "touchNote": "On touch devices the experiments capture page scrolling; tap outside an experiment to scroll.",
-    "particle": { "title": "Particle Typography", "hint": "Move close, click, or scatter with your finger.", "label": "AHMET KULA text made of particles. It scatters on pointer contact." },
+    "touchNote": "On touch devices, tap an experiment to activate it; press DONE when finished and the page scrolls again.",
+    "particle": {
+      "title": "Particle Typography",
+      "hint": "Move close, click, or scatter with your finger.",
+      "label": "AHMET KULA text made of particles. It scatters on pointer contact."
+    },
     "art": {
       "title": "Generative Art Canvas",
       "hint": "Draw. Speed shapes the character of the line.",
@@ -133,7 +154,14 @@
       "color": "Color",
       "label": "Drawing area. Draw with your mouse or finger."
     },
-    "physics": { "title": "Physics Sandbox", "hint": "Grab, fling and collide the objects.", "reset": "RESET", "label": "Physics area. Drag and drop the objects." }
+    "physics": {
+      "title": "Physics Sandbox",
+      "hint": "Grab, fling and collide the objects.",
+      "reset": "RESET",
+      "label": "Physics area. Drag and drop the objects."
+    },
+    "tapToPlay": "TAP TO PLAY",
+    "done": "DONE"
   },
   "contact": {
     "eyebrow": "CONTACT",
@@ -165,18 +193,54 @@
     "inputLabel": "Terminal command",
     "notFound": "command not found: {cmd}. Type `help`.",
     "help": [
-      ["help", "Show commands"],
-      ["about", "About Ahmet Kula"],
-      ["projects", "List projects"],
-      ["skills", "Show technologies"],
-      ["contact", "Contact details"],
-      ["github", "Open the GitHub profile"],
-      ["whoami", "Who are you?"],
-      ["date", "Current date"],
-      ["theme", "Switch theme"],
-      ["play", "Go to the Playground"],
-      ["clear", "Clear the terminal"],
-      ["exit", "Close the terminal"]
+      [
+        "help",
+        "Show commands"
+      ],
+      [
+        "about",
+        "About Ahmet Kula"
+      ],
+      [
+        "projects",
+        "List projects"
+      ],
+      [
+        "skills",
+        "Show technologies"
+      ],
+      [
+        "contact",
+        "Contact details"
+      ],
+      [
+        "github",
+        "Open the GitHub profile"
+      ],
+      [
+        "whoami",
+        "Who are you?"
+      ],
+      [
+        "date",
+        "Current date"
+      ],
+      [
+        "theme",
+        "Switch theme"
+      ],
+      [
+        "play",
+        "Go to the Playground"
+      ],
+      [
+        "clear",
+        "Clear the terminal"
+      ],
+      [
+        "exit",
+        "Close the terminal"
+      ]
     ],
     "about": "Ahmet Kula — Software Engineer / Creative Developer. Builds digital experiences where technology, design and creativity meet.",
     "projectsHeader": "Projects (sample entries are marked):",

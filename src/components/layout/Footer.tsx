@@ -12,12 +12,14 @@ export function Footer() {
   const a = useTranslations("a11y");
   const [year, setYear] = useState<number | null>(null);
   const [near, setNear] = useState(false);
+  const [past, setPast] = useState(false);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
     const onScroll = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       setNear(max > 0 && window.scrollY > max - window.innerHeight * 1.2);
+      setPast(window.scrollY > window.innerHeight * 1.2);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -54,9 +56,9 @@ export function Footer() {
         type="button"
         aria-label={a("backToTop")}
         onClick={() => scrollToTarget(0)}
-        tabIndex={near ? 0 : -1}
+        tabIndex={past && !near ? 0 : -1}
         className="fixed bottom-6 right-6 z-[60] grid h-12 w-12 place-items-center rounded-full bg-fg text-bg transition-all duration-500 md:right-10"
-        style={{ opacity: near ? 1 : 0, transform: near ? "none" : "translateY(20px)", pointerEvents: near ? "auto" : "none" }}
+        style={{ opacity: past && !near ? 1 : 0, transform: past && !near ? "none" : "translateY(20px)", pointerEvents: past && !near ? "auto" : "none" }}
       >
         <ArrowUp size={18} aria-hidden="true" />
       </button>

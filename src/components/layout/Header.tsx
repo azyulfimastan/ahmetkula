@@ -19,6 +19,12 @@ const NAV: { id: SectionId; key: "work" | "about" | "playground" | "contact" }[]
   { id: "contact", key: "contact" },
 ];
 
+/** Şehir adı: TR'de İ korunur, EN'de noktalı İ düz I olur. */
+function cityLabel(locale: string) {
+  const c = siteConfig.timeZoneLabel;
+  return locale === "tr" ? c.toLocaleUpperCase("tr") : c.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+}
+
 function StatusDot() {
   const t = useTranslations("status");
   return (
@@ -46,7 +52,7 @@ function LocaleSwitch({ className }: { className?: string }) {
             aria-pressed={locale === l}
             onClick={() => switchLocale(l)}
             data-cursor-snap
-            className={`px-1 py-1 transition-colors ${locale === l ? "text-accent" : "text-fg/70 hover:text-fg"}`}
+            className={`inline-flex h-10 min-w-10 items-center justify-center px-1 transition-colors ${locale === l ? "text-accent" : "text-fg/70 hover:text-fg"}`}
           >
             {l.toUpperCase()}
           </button>
@@ -199,7 +205,7 @@ export function Header() {
             </button>
             <StatusDot />
             <span className="mono-label hidden text-[0.62rem] text-muted xl:inline">
-              <span className="mr-2">{t("status.localTime")}</span>
+              <span className="mr-2">{t("status.localTime", { city: cityLabel(locale) })}</span>
               <Clock />
             </span>
           </div>
@@ -296,7 +302,7 @@ export function Header() {
           <div className="mono-label flex flex-col gap-2 text-[0.68rem] text-[#8E948C]">
             <span>{t("status.online")}</span>
             <span>
-              {t("status.localTime")} · <Clock />
+              {t("status.localTime", { city: cityLabel(locale) })} · <Clock />
             </span>
           </div>
           <div className="flex items-center gap-3">

@@ -115,8 +115,9 @@ export function Hero() {
           </div>
         </div>
 
-        <div ref={info} className="grid items-end gap-8 md:grid-cols-12">
-          <div className="md:col-span-5">
+        <div ref={info} className="relative grid items-end gap-8 md:grid-cols-12">
+          <div aria-hidden="true" className="pointer-events-none absolute -inset-x-5 -bottom-8 -top-28 z-0 bg-gradient-to-t from-bg via-bg/85 to-transparent md:hidden" />
+          <div className="relative z-10 md:col-span-5">
             <p className="hero-in mono-label text-[0.74rem] leading-relaxed">
               <span className="block">{t("role1")}</span>
               <span className="block text-accent">{t("role2")}</span>
@@ -125,7 +126,7 @@ export function Hero() {
             <p className="hero-in mono-label mt-3 text-[0.66rem] text-muted">{t("vibe")}</p>
           </div>
 
-          <div className="pointer-events-auto flex flex-wrap gap-3 md:col-span-4 md:col-start-8 md:justify-end">
+          <div className="pointer-events-auto relative z-10 flex flex-wrap gap-3 md:col-span-4 md:col-start-8 md:justify-end">
             <Magnetic>
               <button
                 type="button"

@@ -31,10 +31,14 @@
   },
   "status": {
     "online": "SİSTEM ÇEVRİMİÇİ",
-    "localTime": "YEREL SAAT"
+    "localTime": "{city} SAATİ"
   },
   "preloader": {
-    "lines": ["BAŞLATILIYOR...", "DENEYİM ŞEKİLLENİYOR...", "DÜNYAMA HOŞ GELDİN."],
+    "lines": [
+      "BAŞLATILIYOR...",
+      "DENEYİM ŞEKİLLENİYOR...",
+      "DÜNYAMA HOŞ GELDİN."
+    ],
     "skip": "Atla",
     "steps": "Hazırlık"
   },
@@ -61,13 +65,26 @@
     "title1": "BEN SADECE KOD YAZMIYORUM.",
     "title2": "DİJİTAL DENEYİMLER İNŞA EDİYORUM.",
     "intro": "Merhaba, ben Ahmet Kula. Teknoloji, tasarım ve yaratıcılığın kesişiminde dijital ürünler ve etkileşimli deneyimler geliştirmeyi seviyorum. Benim için iyi yazılım yalnızca çalışan kod değil; aynı zamanda düşünülmüş, hızlı ve kullanıcıya değer katan bir deneyimdir.",
-    "tags": ["SOFTWARE ENGINEER", "CREATIVE DEVELOPER", "TR / EN"],
+    "tags": [
+      "SOFTWARE ENGINEER",
+      "CREATIVE DEVELOPER",
+      "TR / EN"
+    ],
     "mantra": "Kodun ötesinde.",
     "pointsLabel": "Çalışma biçimim",
     "points": [
-      { "label": "Düşün.", "text": "Önce problemi ve onu yaşayan insanı anlarım." },
-      { "label": "Tasarla.", "text": "Yapı, ritim ve hareket baştan birlikte düşünülür." },
-      { "label": "Geliştir.", "text": "Hızlı, erişilebilir ve bakımı kolay olarak teslim ederim." }
+      {
+        "label": "Düşün.",
+        "text": "Önce problemi ve onu yaşayan insanı anlarım."
+      },
+      {
+        "label": "Tasarla.",
+        "text": "Yapı, ritim ve hareket baştan birlikte düşünülür."
+      },
+      {
+        "label": "Geliştir.",
+        "text": "Hızlı, erişilebilir ve bakımı kolay olarak teslim ederim."
+      }
     ],
     "portraitAlt": "Ahmet Kula portresi",
     "fallbackLabel": "PORTRE YAKINDA"
@@ -104,7 +121,7 @@
   },
   "toolbox": {
     "eyebrow": "ARAÇ KUTUSU",
-    "title": "THE TOOLBOX",
+    "title": "ARAÇLARIM.",
     "subtitle": "Fikirleri gerçeğe dönüştüren araçlar.",
     "hint": "Etiketleri sürükle, yaklaş, tıkla.",
     "selected": "Seçili",
@@ -113,8 +130,8 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "cloud": "Cloud & DevOps",
-      "creative": "Creative Development",
-      "tools": "Tools"
+      "creative": "Yaratıcı Geliştirme",
+      "tools": "Araçlar"
     }
   },
   "playground": {
@@ -122,18 +139,29 @@
     "title": "PLAYGROUND.",
     "subtitle": "Burada kod biraz daha özgür.",
     "loading": "Deney yükleniyor...",
-    "touchNote": "Dokunmatik cihazlarda deney alanları sayfa kaydırmayı yakalar; kaydırmak için alanın dışına dokun.",
-    "particle": { "title": "Particle Typography", "hint": "İmleci yaklaştır, tıkla, parmağınla dağıt.", "label": "Parçacıklardan oluşan AHMET KULA yazısı. İmleçle dağıtılabilir." },
+    "touchNote": "Dokunmatik cihazlarda bir deneyi etkinleştirmek için üzerine dokun; bitince BİTİR'e bas, sayfa yine kayar.",
+    "particle": {
+      "title": "Parçacık Tipografisi",
+      "hint": "İmleci yaklaştır, tıkla, parmağınla dağıt.",
+      "label": "Parçacıklardan oluşan AHMET KULA yazısı. İmleçle dağıtılabilir."
+    },
     "art": {
-      "title": "Generative Art Canvas",
+      "title": "Üretken Sanat Tuvali",
       "hint": "Çiz. Hız, çizginin karakterini belirler.",
       "clear": "TEMİZLE",
-      "save": "SAVE ART",
+      "save": "KAYDET",
       "auto": "Otomatik",
       "color": "Renk",
       "label": "Çizim alanı. Fareyle veya parmakla çizebilirsin."
     },
-    "physics": { "title": "Physics Sandbox", "hint": "Nesneleri tut, savur, çarptır.", "reset": "RESET", "label": "Fizik alanı. Nesneleri sürükleyip bırakabilirsin." }
+    "physics": {
+      "title": "Fizik Alanı",
+      "hint": "Nesneleri tut, savur, çarptır.",
+      "reset": "SIFIRLA",
+      "label": "Fizik alanı. Nesneleri sürükleyip bırakabilirsin."
+    },
+    "tapToPlay": "DOKUN VE OYNA",
+    "done": "BİTİR"
   },
   "contact": {
     "eyebrow": "İLETİŞİM",
@@ -165,18 +193,54 @@
     "inputLabel": "Terminal komutu",
     "notFound": "komut bulunamadı: {cmd}. `help` yaz.",
     "help": [
-      ["help", "Komutları göster"],
-      ["about", "Ahmet Kula hakkında"],
-      ["projects", "Projeleri listele"],
-      ["skills", "Teknolojileri göster"],
-      ["contact", "İletişim bilgileri"],
-      ["github", "GitHub profilini aç"],
-      ["whoami", "Sen kimsin?"],
-      ["date", "Geçerli tarih"],
-      ["theme", "Temayı değiştir"],
-      ["play", "Playground'a git"],
-      ["clear", "Terminali temizle"],
-      ["exit", "Terminali kapat"]
+      [
+        "help",
+        "Komutları göster"
+      ],
+      [
+        "about",
+        "Ahmet Kula hakkında"
+      ],
+      [
+        "projects",
+        "Projeleri listele"
+      ],
+      [
+        "skills",
+        "Teknolojileri göster"
+      ],
+      [
+        "contact",
+        "İletişim bilgileri"
+      ],
+      [
+        "github",
+        "GitHub profilini aç"
+      ],
+      [
+        "whoami",
+        "Sen kimsin?"
+      ],
+      [
+        "date",
+        "Geçerli tarih"
+      ],
+      [
+        "theme",
+        "Temayı değiştir"
+      ],
+      [
+        "play",
+        "Playground'a git"
+      ],
+      [
+        "clear",
+        "Terminali temizle"
+      ],
+      [
+        "exit",
+        "Terminali kapat"
+      ]
     ],
     "about": "Ahmet Kula — Software Engineer / Creative Developer. Teknoloji, tasarım ve yaratıcılığın kesişiminde dijital deneyimler kurar.",
     "projectsHeader": "Projeler (örnek kayıtlar işaretlidir):",
